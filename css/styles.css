@@ -1,0 +1,297 @@
+html, body{
+    margin: 0;
+}
+
+body {
+    color: #f0e5d8;
+    font-family: 'Georgia', serif;
+    /* height: 100vh; */
+}
+
+#background-wood{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/Beer-Dragons.sites-main/assets/1672792538_grizly-club-p-tekstura-temnogo-dereva-9.jpg');
+    background-size: cover;
+    z-index: -1;
+}
+
+#navbar-wood{
+    background-image: url('/Beer-Dragons.sites-main/assets/1672792532_grizly-club-p-tekstura-temnogo-dereva-2.jpg');
+    height: 125px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+#navbar{
+    display: flex;
+    justify-content: center;
+
+}
+
+#tavern-sign{
+    margin-top: 20px;
+    background-image: url('/Beer-Dragons.sites-main/assets/pngwing.com\ \(2\).png');
+    transform: rotate(-5deg);
+    background-size: cover;
+    background-position: center;
+    width: 361px;
+    height: 133px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+
+#overlay{
+    height: 100vh;
+}
+
+#main-dude-grid{
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 105px 800px 105px;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    position: fixed; 
+    top: 126px; /* Adjust this value to set where the grid should stick */
+    left: 50%;
+    transform: translate(-50%, 0%);
+    
+}
+
+#main-dude{
+    width: 800px;
+}
+
+.vertical-wood-left{
+    grid-area: 1 / 1 / 2 / 2;
+    background: url('/Beer-Dragons.sites-main/assets/vertical-wood-block.jpg');
+    height: 100vh;
+}
+
+.vertical-wood-right{
+    grid-area: 1 / 3 / 2 / 4;
+    background: url('/Beer-Dragons.sites-main/assets/vertical-wood-block.jpg');
+    height: 100vh;
+}
+
+#main-wood{
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+
+#second-background {
+    text-align: center;
+    position: sticky;
+    top: 125px;
+    z-index: 0; 
+    height: calc(100vh - 126px);
+}
+
+#second-background-img {
+    height: 100vh;
+    width: 800px;
+}
+
+p{
+    position: relative;
+    z-index: 100;
+}
+
+
+/* navigation signs */
+
+#signs-div{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    left: 50%;
+    margin-left: -375px;
+    top: -220px;
+    z-index: 5;
+    justify-self: center ;
+    transition: transform 0.5s ease;
+}
+
+.visible{
+    transform: translateY(200px);
+}
+
+.nav-sign{
+    background-image: url('/Beer-Dragons.sites-main/assets/pngwing.com.png');
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    top: 200px;
+    left: 60px;
+    width: 250px;
+    height: 210px;
+    transition: all 0.25s;
+}
+
+.nav-sign:hover{
+    transform: translateY(20px);
+}
+
+.nav-text{
+    color: #f0e5d8;
+    font-size: 30px;
+    margin: 35px 0 0 0;
+    max-width: 200px;
+    text-align: center;
+}
+
+a{
+    color: #f0e5d8;
+    text-decoration: none;
+}
+
+
+/* content css */
+
+#content-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.content-div{
+    width: 700px;
+    background-color: rgba(45, 43, 43, 0.9);
+    z-index: 1;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+
+}
+
+
+.content-span{
+    border: 3px solid rgba(80, 71, 71, 1);
+    width: 690px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.content-main-p{
+    font-size: 32px;
+    margin: 0 0 10px 0;
+}
+
+.content-sub-p{
+    font-size: 20px;
+    border: 1px solid rgba(80, 71, 71, 1);
+    border-radius: 15px;
+    margin: 5px 0;
+    padding: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.25s;
+}
+
+.content-sub-p:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+
+#footer-text{
+    margin-bottom: 0;
+}
+
+
+
+/* css widget */
+
+#character-widget{
+    display: flex;
+    flex-direction: column;
+    font-size: 21px;
+    gap: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 90vw;
+    height: 87vh;
+    background-color: rgba(45, 43, 43, 0.98);
+    color: white;
+    border-radius: 10px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+
+#widget-content{
+    overflow-y: scroll;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+
+#widget-content::-webkit-scrollbar {
+    display: none; 
+}
+
+#widget-picture-and-info{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#character-img{
+    height: 465px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+#widget-h2{
+    font-size: 44px;
+    font-weight: 400;
+    margin: 20px 0 20px 0;
+}
+
+.widget-text{
+    font-size: 24px;
+    font-weight: 400;
+    margin: 3px;
+}
+
+#widget-close-btn{
+    height: 30px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transition: all 0.2s;
+}
+
+#widget-close-btn:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+
+}
+
+.no-scroll {
+    overflow: hidden;
+}

@@ -1,0 +1,257 @@
+html, body{
+    margin: 0;
+}
+
+body {
+    color: #f0e5d8;
+    font-family: 'Georgia', serif;
+}
+
+#background-wood{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/Beer-Dragons.sites-main/assets/1672792538_grizly-club-p-tekstura-temnogo-dereva-9.jpg');
+    background-size: cover;
+    z-index: -1;
+}
+
+#navbar-wood{
+    background-image: url('/Beer-Dragons.sites-main/assets/1672792532_grizly-club-p-tekstura-temnogo-dereva-2.jpg');
+    height: 125px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+}
+
+#navbar{
+    display: flex;
+    justify-content: center;
+
+}
+
+#tavern-sign{
+    margin-top: -80px;
+    position: fixed;
+    background-image: url('/Beer-Dragons.sites-main/assets/pngwing.com\ \(3\).png');
+    background-size: cover;
+    background-position: center;
+    width: 288px;
+    height: 252px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#tavern-sign-text{
+    margin-top: 90px;
+    font-size: 40px;
+    user-select: none;
+}
+
+
+#back-to-menu-sign{
+    background-image: url('/Beer-Dragons.sites-main/assets/pngwing.com\ \(1\).png');
+    z-index: 11;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    top: 23px;
+    left: 60px;
+    width: 211px;
+    height: 80px;
+    transition: all 0.25s;
+}
+
+#back-to-menu-sign:hover{
+    transform: rotate(-5deg) translateY(7px) translateX(3px);
+
+}
+
+#back-to-menu-text{
+    font-size: 25px;
+    text-align: center;
+    color: #f0e5d8;
+    user-select: none;
+}
+
+/* /////////////////////////////////////////////////////// */
+
+#main-wood-grid{
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 105px 800px 105px;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    position: fixed; 
+    top: 125px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    
+}
+
+.vertical-wood-left{
+    grid-area: 1 / 1 / 2 / 2;
+    background: url('/Beer-Dragons.sites-main/assets/vertical-wood-block.jpg');
+    height: 100vh;
+}
+
+.vertical-wood-right{
+    grid-area: 1 / 3 / 2 / 4;
+    background: url('/Beer-Dragons.sites-main/assets/vertical-wood-block.jpg');
+    height: 100vh;
+}
+
+#main-wood{
+    grid-area: 1 / 2 / 2 / 3;
+    max-width: 800px;
+}
+
+
+
+/* css for bounty cards */
+
+#characters{
+    margin-top: 200px;
+    margin-bottom: 50px;
+    justify-self: center;
+    justify-content: center;
+    position: relative;
+    flex-flow: wrap row;
+    z-index: 1;
+    display: flex;
+    max-width: 736px;
+    gap: 40px;
+}
+
+
+.bounty-card{
+    width: 200px;
+    border: 3px solid rgba(40, 6, 6, 1);
+    background-color: rgba(80, 71, 71, 1);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    min-height: 320px;
+    transition: all 0.25s;
+}
+
+.bounty-card:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.bounty-image{
+    width: 160px;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.bounty-name{
+    margin: 0;
+}
+
+.bounty-span{
+    border: 1px solid rgba(40, 6, 6, 1);
+    width: 120px;
+}
+
+.bounty-race{
+    margin: 0;
+}
+
+.bounty-class{
+    margin: 0 0 10px 0;
+}
+
+
+
+/* css widget */
+
+#character-widget{
+    display: flex;
+    flex-direction: column;
+    font-size: 21px;
+    gap: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 90vw;
+    height: 87vh;
+    background-color: rgba(45, 43, 43, 0.98);
+    color: white;
+    border-radius: 10px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+
+#widget-content{
+    overflow-y: scroll;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+
+#widget-content::-webkit-scrollbar {
+    display: none; 
+}
+
+#widget-picture-and-info{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#character-img{
+    height: 465px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+#widget-h2{
+    font-size: 44px;
+    font-weight: 400;
+    margin: 20px 0 20px 0;
+}
+
+.widget-text{
+    font-size: 24px;
+    font-weight: 400;
+    margin: 3px;
+}
+
+#widget-close-btn{
+    height: 30px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transition: all 0.2s;
+}
+
+#widget-close-btn:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+
