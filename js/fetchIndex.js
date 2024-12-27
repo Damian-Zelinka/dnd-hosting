@@ -33,8 +33,8 @@ async function loadAllData() {
     chroniclesSub1.textContent = `${chroniclesData.events[0].year} ${chroniclesData.events[0].day} ${chroniclesData.events[0].month} - ${chroniclesData.events[0].description}`;
     chroniclesSub2.textContent = `${chroniclesData.events[1].year} ${chroniclesData.events[1].day} ${chroniclesData.events[1].month} - ${chroniclesData.events[1].description}`;
 
-    charactersSub1.textContent = `${charactersData.character_list[first].name} - ${charactersData.character_list[first].race} ${charactersData.character_list[first].class}`;
-    charactersSub2.textContent = `${charactersData.character_list[second].name} - ${charactersData.character_list[second].race} ${charactersData.character_list[second].class}`;
+    charactersSub1.textContent = `${charactersData.character_list[first].name} - ${charactersData.character_list[first].race}, ${charactersData.character_list[first].class}`;
+    charactersSub2.textContent = `${charactersData.character_list[second].name} - ${charactersData.character_list[second].race}, ${charactersData.character_list[second].class}`;
 
     charactersSub1.addEventListener('click', () => createCharacterWidget(charactersData.character_list[first].id));
     charactersSub2.addEventListener('click', () => createCharacterWidget(charactersData.character_list[second].id));
